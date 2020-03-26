@@ -1,0 +1,15 @@
+name: docker-swarm-deploy-action
+author: Kaj Rauch
+description: This action deploys your app to a Docker Swarm as a stack
+
+inputs:
+    ssh_remote_host:
+        required: true
+    public_ssh_key:
+        required: true
+    private_ssh_key:
+        required: true
+    
+runs:
+    using: docker
+    img: Dockerfile
