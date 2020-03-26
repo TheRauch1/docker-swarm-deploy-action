@@ -13,3 +13,5 @@ eval $(ssh-agent) && ssh-add $HOME/.ssh/id_rsa
 
 # Connects to host and deploys
 ssh -vvv -o "StrictHostKeyChecking no" -p "$INPUT_PORT" "$INPUT_SSHHOST"
+
+cat $HOME/.ssh/known_hosts
