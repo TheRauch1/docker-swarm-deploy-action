@@ -12,4 +12,4 @@ echo "$INPUT_SSH_PUBLIC_KEY" >> $HOME/.ssh/known_hosts && chmod 600 $HOME/.ssh/k
 eval $(ssh-agent) && ssh-add $HOME/.ssh/id_rsa
 
 # Connects to host and deploys
-docker --debug-level debug --host "$INPUT_SSH_REMOTE_HOST" "$@"
+docker --log-level debug --host "$INPUT_SSH_REMOTE_HOST" "$@"
