@@ -4,10 +4,14 @@ description: This action deploys your app to a Docker Swarm as a stack
 
 inputs:
     ssh_remote_host:
-        required: true
+        required: false
     public_ssh_key:
         required: true
     private_ssh_key:
+        required: true
+    port:
+        required: true
+    sshhost:
         required: true
     
 runs:
