@@ -12,4 +12,4 @@ inputs:
     
 runs:
     using: docker
-    img: Dockerfile
+    image: Dockerfile
