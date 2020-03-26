@@ -12,4 +12,4 @@ echo "$INPUT_SSH_PUBLIC_KEY" >> /etc/ssh/ssh_known_hosts && chmod 600 /etc/ssh/s
 eval $(ssh-agent) && ssh-add $HOME/.ssh/id_rsa
 
 # Connects to host and deploys
-ssh -vvv -o "StrictHostKeyChecking no" -p "$INPUT_PORT" "$INPUT_SSHHOST"
+docker --log-level debug --host "$INPUT_SSH_REMOTE_HOST" "$@"
